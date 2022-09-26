@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/azure-functions-java-11
+{
+	"name": "Azure Functions & Java 11",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [ 7071 ],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-azurefunctions",
+				"vscjava.vscode-java-pack",
+				"ms-azuretools.vscode-docker",
+				"vscjava.vscode-java-debug",
+				"ms-vscode.azurecli",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"redhat.java",
+				"vscjava.vscode-maven",
+				"vscjava.vscode-java-dependency",
+				"vscjava.vscode-java-test",
+				"redhat.vscode-yaml",
+				"GitHub.copilot",
+				"SonarSource.sonarlint-vscode",
+				"ms-azuretools.vscode-azurestorage"
+			]
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",	
+	"features": {
+		"docker-in-docker": "latest",
+		"kubectl-helm-minikube": "latest",
+		"github-cli": "latest",
+		"azure-cli": "latest",
+		"desktop-lite": "latest"
+	}
+
+}
